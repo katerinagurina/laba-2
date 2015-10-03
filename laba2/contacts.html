@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body style="background-color:#FFF5EE">
+    <div class="container">
+      <header> <center><h1>Макс Корж</h1></center>
+      </header>
+      <div class="navbar navbar-inverse">
+        <nav class="navbar-inner ">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">
+              <span class="glyphicon glyphicon-home"></span>Главная </a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="afisha.html">Афиша </a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="video.html">Видео </a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="contacts.html">Fun-club</a></li>
+          </ul>
+          </nav>
+      </div>
+      <div class="active"id="contacts">
+        <img src="./9.png" hspace="300">
+        <h3>Комментарии:</h3>
+        <p id="1" class="text-success" ><p id="2" class="text-danger h4 bg-info"></p></p>
+        <h3>Оставить свое мнение о Максе:</h3>
+        <form id="form1">
+          <label>Вашe имя</label><br>
+          <textarea rows="1" cols="100" id="txt4"></textarea><br>
+          <label>Ваш комментарий</label><br>
+          <textarea rows="5" cols="100" id="txt"></textarea><br><br>
+          <input value="Добавить" onclick="addcoment()" type="button">
+        </form>
+      </div>
+      <script src="http://code.jquery.com/jquery-latest.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script>
+      var text="";
+      function addcoment(){
+        var name=document.getElementById("txt4").value;
+        var q=document.getElementById("txt").value;
+        document.getElementById("1").innerHTML=text;
+        text= text+name+":"+"                          "+q+"<br>"
+        document.getElementById("2").innerHTML=name+":"+"                          "+q;
+        document.getElementById("txt").value="";
+        document.getElementById("txt4").value="";
+      }
+      </script>
+  </body>
+</html>
